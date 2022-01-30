@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+   MIIKA LAHTI
+-->
+<html>
+  <head>
+    <title>Weather_app</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar begins -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Weather</a>
+        <ul class="navbar-nav me-auto my-2">
+          <li class="nav-item">
+            <a class="nav-link" href="data.html">DATA</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
+
+    <!-- Page content begins -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <select id="Amount" class="form-select">
+            <option value="0">nyt</option>
+            <option value="24">24h</option>
+            <option value="48">48h</option>
+            <option value="72">72h</option>
+            <option value="168">viikko</option>
+            <option value="744">kuukausi</option>
+          </select>
+        </div>
+      </div>
+      <div id="tyyppi" class="row">
+        <div class="col-12">
+          <canvas id="temp"></canvas>
+        </div>
+        <div class="col-12">
+          <canvas id="humidity_in"></canvas>
+        </div>
+        <div class="col-12">
+          <canvas id="humidity_out"></canvas>
+        </div>
+        <div class="col-12">
+          <canvas id="light"></canvas>
+        </div>
+        <div class="col-12">
+          <canvas id="rain"></canvas>
+        </div>
+      </div>
+    </div>
+    <!-- Page content ends -->
+
+    <!-- Link scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@next/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="charts.js"></script>
+  </body>
+</html>

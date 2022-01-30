@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Datasheet</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar begins -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Weather</a>
+        <ul class="navbar-nav me-auto my-2">
+          <li class="nav-item">
+            <a class="nav-link" href="data.html">DATA</a>
+          </li>
+        </ul>
+        <div>
+          <h1 style="color: white">API</h1>
+          <div>
+            <select id="API" class="form-select">
+              <option value="1">Koulun</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
+
+    <!-- Page content begins -->
+    <div class="container-sm">
+      <div>
+        <br />
+        <table class="table table-dark table-bordered table-striped">
+          <div class="row">
+            <h1 class="col-4">DATASHEET</h1>
+            <div class="col-3">
+              <select id="Dataspecifier" class="form-select">
+                <option value="temperature">Ulkolämpötila</option>
+                <option value="wind_speed">Tuulennopeus</option>
+                <option value="humidity_out">Ulkoilmankosteus</option>
+                <option value="humidity_in">Sisäilmankosteus</option>
+                <option value="light">valonmäärä</option>
+                <option value="rain">sateenmäärä</option>
+                <option value="limit">kaikki</option>
+                <option value="R5_Humidity_in">sisäkosteus oma</option>
+              </select>
+            </div>
+            <div class="col-3">
+              <select id="Amount" class="form-select">
+                <option value="0">nyt</option>
+                <option value="24">24h</option>
+                <option value="48">48h</option>
+                <option value="72">72h</option>
+                <option value="168">viikko</option>
+                <option value="744">kuukausi</option>
+              </select>
+            </div>
+            <button
+              class="btn btn-primary col-2"
+              type="button"
+              id="getDataButton"
+            >
+              button
+            </button>
+          </div>
+          <br />
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Dataluokka</th>
+              <th scope="col">Aika</th>
+              <th scope="col">arvo</th>
+            </tr>
+          </thead>
+          <tbody id="DataTable"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Page content ends -->
+
+    <!-- Link scripts-->
+    <script src="script.js"></script>
+  </body>
+</html>
